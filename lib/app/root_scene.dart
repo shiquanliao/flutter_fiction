@@ -70,20 +70,20 @@ class _RootSceneState extends State<RootScene> {
 
     return Scaffold(
       body: IndexedStack(
-        children: [
-          Text("树架"),
-          Text("书城"),
-          Text("我的"),
+        children: <Widget>[
+          Text('书架'),
+          Text('书城'),
+          Text('我的'),
         ],
         index: _tabIndex,
       ),
       bottomNavigationBar: CupertinoTabBar(
         backgroundColor: Colors.white,
         activeColor: STColors.primary,
-        items: [
-          BottomNavigationBarItem(icon: getTabIcon(0), title: Text('书架')),
-          BottomNavigationBarItem(icon: getTabIcon(1), title: Text('书城')),
-          BottomNavigationBarItem(icon: getTabIcon(2), title: Text('我的')),
+        items: <BottomNavigationBarItem>[
+          BottomNavigationBarItem(icon: getTabIcon(0), label: '书架'),
+          BottomNavigationBarItem(icon: getTabIcon(1), label: '书城'),
+          BottomNavigationBarItem(icon: getTabIcon(2), label: '我的'),
         ],
         currentIndex: _tabIndex,
         onTap: (index) {
