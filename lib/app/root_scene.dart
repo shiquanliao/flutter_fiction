@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_fiction/app/user_manager.dart';
 import 'package:flutter_fiction/global.dart';
+import 'package:flutter_fiction/home/home_book.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'package:flutter_fiction/public.dart';
@@ -72,7 +73,7 @@ class _RootSceneState extends State<RootScene> {
       body: IndexedStack(
         children: <Widget>[
           Text('书架'),
-          Text('书城'),
+          HomeBook(),
           Text('我的'),
         ],
         index: _tabIndex,
